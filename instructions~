@@ -1,0 +1,9 @@
+app_engine : contains all the necessary files to be uploaded on google app engine
+
+datatoxls.py : works on /showAll.html and generates BlastResults.xls containing akk the data. File outputs a html code of sorted data which can ve saved as sortedData.html
+
+events.py : works on sortedData.html and produce html file for each event's data
+
+workshops.py : works on sortedData.html and produce html file for each workshop's data
+
+payment.py : performs calculation about payemnt recieved , expected, ..

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Home Page</title>
+
+  <SCRIPT type="text/javascript">
+	window.history.forward();
+	function noBack() { window.history.forward(); }
+  </SCRIPT>
+</head>
+
+
+
+<body onload="noBack();" onpageshow="noBack();" background="/css/images/background-1.jpg">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10"><a href="/HomePage"><h1 class="text-danger">CodeTut</h1></a></div>
+      <div class="col-md-2"><h3>{{ username }} <small><a href="/LogOut">LogOut</a></small> </h3> </div>
+
+    </div>
+
+
+
+    <div class="row"></div>
+
+
+
+
+  <hr><hr>
+
+  <div class="row">
+                          <div class="col-md-2"></div>
+    <a href="/AddTutorial"><div class="col-md-3"><button type="button" class="btn btn-default btn-lg active">Add Tutorial</button></div></a>
+    <a href="/ListTutorial"><div class="col-md-3"><button type="button" class="btn btn-default btn-lg active">List All Tutorial</button></div></a>
+    <a href="/JoinedTutorial"><div class="col-md-3"><button type="button" class="btn btn-default btn-lg active">My Tutorial</button></div></a>
+
+  </div>
+  <hr><hr>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+
+<title>WEB PAGE TITLE GOES HERE</title>
+<SCRIPT type="text/javascript">
+window.history.forward();
+function noBack() { window.history.forward(); }
+</SCRIPT>
+
+</head>
+
+<body onload="noBack();" onpageshow="noBack();" style="margin: 0px; padding: 0px; font-family: 'Trebuchet MS',verdana;">
+
+<table width="100%" style="height: 100%;" cellpadding="10" cellspacing="0" border="0"><tr>
+
+<a href="/HomePage"><h1 class="text-danger">CodeTut</h1></a>
+<h3>{{ username }} <small><a href="/LogOut">LogOut</a></small> </h3>
+
+<!-- ============ LEFT COLUMN (MENU) ============== -->
+<td width="20%" valign="top" bgcolor="#999f8e">
+<a href="#">Tutorial Page</a><br>
+<a href="#">Syllabus</a><br>
+<a href="#">Video Lecture</a><br>
+<a href="#">Exam</a><br>
+<a href="#">Submissions</a>
+</td>
+
+<!-- ============ RIGHT COLUMN (CONTENT) ============== -->
+<td width="90%" height="650" valign="top" background="/css/images/background-1.jpg">
+
+<h1>{{ tut.title }}</h1>
+
+<h2>By, {{ tut.author }}</h2>
+
+
+<b>Description : </b> {{ tut.description }} <br>
+<br>
+
+<b>Abstract : </b>{{ tut.abstract }}<br>
+<hr>
+{% if not joined %}
+<form method="post">
+  <input type="Submit" value="Join Tutorial">
+</form>
+{% else %}
+<input type="Submit" value="Alreday Joined">
+{% endif %}
+
+
+</td></tr></table>
+
+</body>
+
+<html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+{% autoescape true %}
+<html>
+	<head>
+  		<link href="css/bootstrap.css" rel="stylesheet">
+  		<meta name="viewport" content="width=device-width, initial-scale=1">
+  		<title>Complete List</title>
+
+			<SCRIPT type="text/javascript">
+			window.history.forward();
+			function noBack() { window.history.forward(); }
+			</SCRIPT>
+	</head>
+
+  <body onload="noBack();" onpageshow="noBack();" background="/css/images/background-1.jpg">
+	<div class="container">
+
+		<div class="row">
+			<div class="col-md-10"><a href="/HomePage"><h1 class="text-danger">CodeTut</h1></a></div>
+			<div class="col-md-2"><h3>{{ username }} <small><a href="/LogOut">LogOut</a></small> </h3> </div>
+
+		</div>
+		<hr><hr>
+
+		<div class="row">
+			<h2><center> Joined Tutorials</center></h2>
+		</div>
+
+{% for tutorial in tutorials %}
+
+		<div class="row">
+
+			<div class="col-md-2"></div>
+			<div class="col-md-8">
+			<div class="card card-inverse" style="background-color: #333; border-color: #333;">
+  		<div class="card-block">
+				<div><hr></div>
+    		<center>
+					<h3 class="card-title text-muted">{{ tutorial.title }}</h3>
+    			<p class="card-text text-warning">{{ tutorial.description }}</p>
+    			<a href="/ViewTutorial/{{tutorial.title}}" class="btn btn-primary">Join Course</a>
+			</center>
+  		</div>
+			</div>
+			</div>
+			<div class="col-md-2"></div>
+		</div>
+
+		<div class="row"><hr></div>
+
+
+{% endfor %}
+		</div>
+<!--
+	<table class="table table-hover">
+		<tr>
+      <th> ID
+			<th>Author
+			<th>Title
+			<th>Description
+		</tr>
+
+    {% for tutorial in tutorials %}
+      <tr>
+      <td><a href="/ViewTutorial/{{tutorial.title}}">{{ tutorial.key.id() }}</a>
+			<td>{{ tutorial.author }}
+			<td>{{ tutorial.title }}
+			<td>{{ tutorial.description }}
+		</tr>
+    {% endfor %}
+	</table>
+    <hr>
+		<hr>
+	<button>Export</button><small>(Does Nothing For Now)</small> -->
+	</div>
+  </body>
+</html>
+{% endautoescape %}

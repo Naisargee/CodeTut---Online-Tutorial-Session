@@ -1,0 +1,81 @@
+<!DOCTYPR html>
+<html>
+
+
+<head>
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Main Page</title>
+
+  <SCRIPT type="text/javascript">
+	window.history.forward();
+	function noBack() { window.history.forward(); }
+  </SCRIPT>
+</head>
+
+
+
+<body onload="noBack();" onpageshow="noBack();"  background="/css/images/background-1.jpg">
+    <div class="container">
+
+      <div class="container">
+
+    		<div class="row">
+    			<div class="col-md-10"><a href="/HomePage"><h1 class="text-danger">CodeTut</h1></a></div>
+    			<div class="col-md-2"><h3>{{ username }} <small><a href="/LogOut">LogOut</a></small> </h3> </div>
+
+    		</div>
+    		<hr><hr>
+
+
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-8 center-block">
+        <center><h1>Add Tutorial</h1></center>
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+
+    <div class="row">
+      <form class="form-horizontal" action="/AddTutorial" method="post">
+        <div class="form-group">
+          <label for="title" class="col-sm-2 control-label">Title</label>
+          <div class="col-sm-10">
+            <input type="text" name="title" class="form-control" id="title" placeholder="Title" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="description" class="col-sm-2 control-label">Description</label>
+          <div class="col-sm-10">
+            <input type="textarea" name="description" class="form-control" id="description" placeholder="Description" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="description" class="col-sm-2 control-label">Abstract</label>
+          <div class="col-sm-10">
+            <textarea rows="4" name="abstract" class="form-control" id="abstract" placeholder="Abstract of the tutorial goes here."></textarea>
+          </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-default">Submit</button>
+          </div>
+        </div>
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</body>
+
+</html>
